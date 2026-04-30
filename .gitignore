@@ -1,0 +1,54 @@
+#Environment (NUNCA versionar credenciais)
+.env
+.env.*
+
+#Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+#Virtual environments
+venv/
+env/
+.venv/
+
+#Logs (evita crescer e vazar dados sensíveis)
+logs/
+
+# Dados sensíveis
+**/*.csv
+**/TERMOS/
+
+#Playwright / browser cache
+playwright/
+ms-playwright/
+playwright-report/
+test-results/
+
+#Sistema operacional
+.DS_Store
+Thumbs.db
+
+#IDEs
+.vscode/
+.idea/
+
+#packaging/build
+build/
+dist/
+*.egg-info/
+
+#backups e temporários
+*.bak
+*.tmp
+*.swp
+
+#Secrets genéricos
+*.key
+*.pem
+*.crt
+
+#Banco de dados local
+*.db
+*.sqlite3
