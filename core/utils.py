@@ -1,3 +1,4 @@
+import unicodedata
 import re
 import pandas as pd
 
@@ -13,5 +14,7 @@ def apenas_numeros(texto):
 
 
 def sanitize_filename(nome):
-    nome = nome.replace(" ", "_")
+    nome = unicodedata.normalize('NFKD', nome)
+    nome = nome.encode('ascii', 'ignore').decode('ascii')
+    nome = re.sub(r'\s+', '_', nome)
     return re.sub(r'[^a-zA-Z0-9_\-]', '', nome)

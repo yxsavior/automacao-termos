@@ -18,7 +18,6 @@ def preencher_form(page, dados, url, botao, pasta, tipo):
         
         page.click('button[role="combobox"]', timeout=15000)
         opcao_site = dados["estado_civil"].split("(")[0]
-        logger.info(f"Estado civil selecionado: {opcao_site}")
         page.get_by_role("option", name=opcao_site, exact=True).click(timeout=15000)
 
         # Gerar termo
